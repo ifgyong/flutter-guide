@@ -1,11 +1,10 @@
-# Table of contents
+# Flutter
 
 * [简介](README.md)
 
 ## 入门 <a id="test"></a>
 
 * [第一章 开始](test/di-yi-zhang-kai-shi/README.md)
-  * [Untitled](test/di-yi-zhang-kai-shi/untitled.md)
   * [初试Dart](test/di-yi-zhang-kai-shi/chu-shi-dart.md)
   * [安装flutter](test/di-yi-zhang-kai-shi/an-zhuang-flutter.md)
   * [hello word](test/di-yi-zhang-kai-shi/hello-word.md)
@@ -18,7 +17,7 @@
   * [打包发布](test/di-yi-zhang-kai-shi/da-bao-fa-bu.md)
 * [第二章 第一个Flutter程序](test/di-er-zhang-di-yi-ge-flutter-cheng-xu.md)
 * [第三章 基础组件](test/di-san-zhang-ji-chu-zu-jian.md)
-* [文本和样式](test/wen-ben-he-yang-shi.md)
+	* [文本和样式](books/3.1testandstyle.md)
 * [第四章 布局](test/di-si-zhang-bu-ju.md)
 * [第五章 容器组件](test/di-wu-zhang-rong-qi-zu-jian.md)
 * [第六章 滚动组件](test/untitled-1.md)
