@@ -1,0 +1,27 @@
+{
+    "plugins": [
+         "back-to-top-button",
+		 "chapter-fold",
+		 "expandable-chapters-small",
+		 "expandable-chapters",
+		 "code",
+		 "-lunr",
+		 "-search",
+		 "search-pro",
+		 "github",
+		 "donate"
+    ],
+	"pluginsConfig": {
+        "github": {
+            "url": "https://github.com/ifgyong"
+        },
+		"donate": {
+				  "wechat": "/imgs/wechatpay.jpg",
+				  "alipay": "/imgs/alipay.jpg",
+				  "title": "如果觉得文章对你有所帮助，讨杯咖啡也是极好的。",
+				  "button": "赞赏",
+				  "alipayText": "支付宝打赏",
+				  "wechatText": "微信打赏"
+			  }
+    }
+}

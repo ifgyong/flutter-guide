@@ -16,8 +16,12 @@
     * [运行](test/di-yi-zhang-kai-shi/tiao-shi/yun-hang.md)
   * [打包发布](test/di-yi-zhang-kai-shi/da-bao-fa-bu.md)
 * [第二章 第一个Flutter程序](test/di-er-zhang-di-yi-ge-flutter-cheng-xu.md)
-* [第三章 基础组件](test/di-san-zhang-ji-chu-zu-jian.md)
-	* [文本和样式](books/3.1testandstyle.md)
+* [第三章 基础组件]()
+	* [widget 简介]
+	* [状态管理]	 
+	* [文本和样式](books/3.3textandstyle.md)
+	* [按钮](books/3.4button.md)
+	* [图片和Icon](books/3.5img.md)
 * [第四章 布局](test/di-si-zhang-bu-ju.md)
 * [第五章 容器组件](test/di-wu-zhang-rong-qi-zu-jian.md)
 * [第六章 滚动组件](test/untitled-1.md)
