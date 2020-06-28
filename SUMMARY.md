@@ -22,6 +22,7 @@
 	* [文本和样式](books/3.3textandstyle.md)
 	* [按钮](books/3.4button.md)
 	* [图片和Icon](books/3.5img.md)
+	* [单选和复选矿](books/3.6sw.md)
 * [第四章 布局](test/di-si-zhang-bu-ju.md)
 * [第五章 容器组件](test/di-wu-zhang-rong-qi-zu-jian.md)
 * [第六章 滚动组件](test/untitled-1.md)

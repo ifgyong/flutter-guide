@@ -1,27 +1,34 @@
 {
     "plugins": [
          "back-to-top-button",
-		 "chapter-fold",
-		 "expandable-chapters-small",
-		 "expandable-chapters",
-		 "code",
-		 "-lunr",
-		 "-search",
-		 "search-pro",
-		 "github",
-		 "donate"
+         "chapter-fold",
+         "expandable-chapters-small",
+         "expandable-chapters",
+         "code",
+         "-lunr",
+         "-search",
+         "search-pro",
+         "github",
+         "donate",
+         "tbfed-pagefooter"
     ],
 	"pluginsConfig": {
-        "github": {
+    "github": {
             "url": "https://github.com/ifgyong"
         },
-		"donate": {
+    "donate": {
 				  "wechat": "/imgs/wechatpay.jpg",
 				  "alipay": "/imgs/alipay.jpg",
 				  "title": "如果觉得文章对你有所帮助，讨杯咖啡也是极好的。",
 				  "button": "赞赏",
 				  "alipayText": "支付宝打赏",
 				  "wechatText": "微信打赏"
-			  }
+			  },
+        "tbfed-pagefooter": {
+           "copyright": "Copyright &copy ifgyong 2020",
+           "modify_label": "该文件修订时间：",
+           "modify_format": "YYYY-MM-DD HH:mm:ss"
+       }
+
     }
 }
