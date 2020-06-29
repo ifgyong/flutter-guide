@@ -17,8 +17,8 @@
   * [打包发布]()
 * [第二章 第一个Flutter程序]()
 * [第三章 基础组件](*)
-	* [widget 简介]
-	* [状态管理]	 
+	* [3.1： widget 简介]()
+	* [3.2：状态管理](books/3.2state.md)
 	* [3.3：文本和样式](books/3.3textandstyle.md)
 	* [3.4：按钮](books/3.4button.md)
 	* [3.5：图片和Icon](books/3.5img.md)
