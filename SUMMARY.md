@@ -19,10 +19,12 @@
 * [第三章 基础组件]()
 	* [widget 简介]
 	* [状态管理]	 
-	* [文本和样式](books/3.3textandstyle.md)
-	* [按钮](books/3.4button.md)
-	* [图片和Icon](books/3.5img.md)
-	* [单选和复选矿](books/3.6sw.md)
+	* [3.3：文本和样式](books/3.3textandstyle.md)
+	* [3.4：按钮](books/3.4button.md)
+	* [3.5：图片和Icon](books/3.5img.md)
+	* [3.6：单选和复选矿](books/3.6sw.md)
+	* [3.7：输入框](books/3.7textfield.md)
+	* [3.8: 进度指示器](books/3.8indicator.md)
 * [第四章 布局](test/di-si-zhang-bu-ju.md)
 * [第五章 容器组件](test/di-wu-zhang-rong-qi-zu-jian.md)
 * [第六章 滚动组件](test/untitled-1.md)
