@@ -29,7 +29,7 @@
 * [第四章 布局](test/di-si-zhang-bu-ju.md)
 	* [4.1 布局类组件简介]() 
 	* [4.2 线性布局（Row和Column]()
-	* [4.3 弹性布局（Flex）]()
+	* [4.3 弹性布局（Flex）](books/4.3flex.md)
 	* [4.4 流式布局]()
 	* [4.5 层叠布局 Stack、Positioned](books/4.5stack.md)
 	* [4.6 对齐与相对定位（Align](books/4.6align.md)

@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>3.9: 弹窗 · GitBook</title>
+        <title>4.3 弹性布局（Flex） · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,6 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../test/di-si-zhang-bu-ju.md" />
-    
-    
-    <link rel="prev" href="3.8indicator.html" />
     
 
     </head>
@@ -413,7 +409,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.3.9" data-path="3.9dialog.html">
+        <li class="chapter " data-level="2.3.9" data-path="3.9dialog.html">
             
                 <a href="3.9dialog.html">
             
@@ -471,7 +467,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4.3" data-path="4.3flex.html">
+        <li class="chapter active" data-level="2.4.3" data-path="4.3flex.html">
             
                 <a href="4.3flex.html">
             
@@ -1535,7 +1531,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >3.9: 弹窗</a>
+        <a href=".." >4.3 弹性布局（Flex）</a>
     </h1>
 </div>
 
@@ -1550,186 +1546,134 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="39-&#x5F39;&#x7A97;">3.9 &#x5F39;&#x7A97;</h2>
-<p> &#x7EC4;&#x4EF6;&#x5E93;&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x591A;&#x79CD;&#x5F39;&#x7A97;&#x9002;&#x7528;&#x4E8E;&#x9009;&#x62E9;&#x65F6;&#x95F4;&#x3001;&#x5B9A;&#x65F6;&#x3001;&#x7528;&#x6237;&#x9009;&#x62E9;&#x3001;&#x8868;&#x5355;&#x63D0;&#x4EA4;&#x7B49;&#x3002;&#x3002;&#x3002;</p>
-<h3 id="391-showcupertinodialog">3.9.1 showCupertinoDialog</h3>
-<p><code>showCupertinoModalPopup</code>&#x662F;&#x4E00;&#x4E2A;<code>iOS-style</code>&#x98CE;&#x683C;&#x7684;&#x5F39;&#x7A97;&#xFF0C;&#x4ECE;&#x5E95;&#x90E8;&#x5F39;&#x51FA;&#xFF0C;&#x9644;&#x5E26;&#x4E86;&#x4E00;&#x4E2A;&#x552F;&#x4E00;&#x52A8;&#x753B;&#x548C;&#x6E10;&#x53D8;&#x6D88;&#x5931;&#x7684;&#x52A8;&#x753B;&#xFF0C;&#x6309;&#x94AE;&#x4E5F;&#x662F;<code>iOS-style</code>&#x98CE;&#x683C;&#xFF0C;&#x70B9;&#x51FB;&#x906E;&#x7F69;&#x8FD4;&#x56DE;&#x3002;&#x4E0B;&#x9762;&#x770B;&#x4E0B;&#x4EE3;&#x7801;&#xFF1A;</p>
+                                <h2 id="43-&#x5F39;&#x6027;&#x5E03;&#x5C40;&#xFF08;flex&#xFF09;">4.3 &#x5F39;&#x6027;&#x5E03;&#x5C40;&#xFF08;Flex&#xFF09;</h2>
+<p><code>Flex</code>&#x5F39;&#x6027;&#x5E03;&#x5C40;&#xFF0C;&#x662F;&#x5E38;&#x89C1;&#x7684;&#x4E00;&#x79CD;&#x5E03;&#x5C40;&#xFF0C;&#x4ED6;&#x5141;&#x8BB8;&#x76D2;&#x5B50;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x6BD4;&#x4F8B;&#x6765;&#x5206;&#x914D;&#x7A7A;&#x95F4;&#x3002;</p>
+<h3 id="flex">Flex</h3>
+<p><code>Flex</code>&#x7EC4;&#x4EF6;&#x53EF;&#x4EE5;&#x6CBF;&#x7740;&#x6C34;&#x5E73;&#x6216;&#x8005;&#x5782;&#x76F4;&#x65B9;&#x5411;&#x6392;&#x5217;&#x7EC4;&#x4EF6;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x77E5;&#x9053;&#x4E3B;&#x8F74;&#x65B9;&#x5411;&#xFF0C;&#x4F7F;&#x7528;<code>Row</code>&#x6216;<code>Column</code>&#x53EF;&#x80FD;&#x4F1A;&#x66F4;&#x65B9;&#x4FBF;&#x70B9;&#xFF0C;&#x56E0;&#x4E3A;<code>Row</code>&#x548C;<code>Column</code>&#x90FD;&#x662F;&#x7EE7;&#x627F;<code>Flex</code>,&#x53C2;&#x6570;&#x57FA;&#x672C;&#x76F8;&#x540C;&#xFF0C;&#x6240;&#x4EE5;<code>Flex</code>&#x53EF;&#x4EE5;&#x7528;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x57FA;&#x672C;<code>Row</code>&#x548C;<code>Column</code>&#x90FD;&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x8981;&#x6C42;&#x3002;</p>
+<pre><code class="lang-dart"> Flex({
+    Key key,
+    <span class="hljs-meta">@required</span> <span class="hljs-keyword">this</span>.direction,
+    <span class="hljs-keyword">this</span>.mainAxisAlignment = MainAxisAlignment.start,
+    <span class="hljs-keyword">this</span>.mainAxisSize = MainAxisSize.max,
+    <span class="hljs-keyword">this</span>.crossAxisAlignment = CrossAxisAlignment.center,
+    <span class="hljs-keyword">this</span>.textDirection,
+    <span class="hljs-keyword">this</span>.verticalDirection = VerticalDirection.down,
+    <span class="hljs-keyword">this</span>.textBaseline,
+    <span class="hljs-built_in">List</span>&lt;Widget&gt; children = <span class="hljs-keyword">const</span> &lt;Widget&gt;[],
+  })
+</code></pre>
+<ul>
+<li><code>direction</code>: &#x6307;&#x5B9A;<code>Axis.vertical</code>&#x5B83;&#x5C31;&#x662F;<code>Column</code>&#xFF0C;&#x6307;&#x5B9A;&#x4E3A;<code>Axis.horizontal</code>&#x5B83;&#x5C31;&#x662F;<code>Row</code>.</li>
+<li><code>mainAxisAlignment</code>: &#x4E3B;&#x8F74;&#x7684;&#x6392;&#x5217;&#x4F4D;&#x7F6E;&#xFF0C;&#x5982;&#x679C;&#x6587;&#x672C;&#x65B9;&#x5411;&#x662F;<code>TextDirection.ltr</code>,<code>start</code>,&#x6309;&#x7167;&#x4ECE;&#x5DE6;&#x5411;&#x53F3;&#x7684;&#x5F00;&#x59CB;&#x65B9;&#x5411;&#x6392;&#x5217;,&#x5426;&#x5219;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x6392;&#x5217;&#x3002;<code>center</code>&#x662F;&#x6309;&#x7167;&#x4E2D;&#x95F4;&#x5411;&#x4E24;&#x8FB9;&#x6392;&#x5217;&#xFF0C;<code>end</code>&#x662F;&#x6309;&#x7167;&#x4ECE;&#x7ED3;&#x5C3E;&#x5411;&#x5F00;&#x59CB;&#x65B9;&#x5411;&#x6392;&#x5217;&#x3002;<code>spaceBetween</code>&#x662F;&#x4E24;&#x4E2A;&#x5B50;&#x7EC4;&#x4EF6;&#x95F4;&#x9694;&#x4E00;&#x81F4;&#x3002;<code>spaceEvenly</code>&#x662F;&#x6240;&#x6709;&#x7684;&#x7A7A;&#x9699;&#x4E00;&#x81F4;&#x3002;<code>spaceAround</code>&#x5F00;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x662F;&#x4E2D;&#x95F4;&#x7684;&#x95F4;&#x9699;&#x7684;&#x4E00;&#x534A;&#x3002;</li>
+<li><code>crossAxisAlignment</code> &#x526F;&#x8F74;&#x65B9;&#x5411;&#xFF0C;&#x548C;&#x4E3B;&#x8F74;&#x65B9;&#x5411;&#x7C7B;&#x4F3C;&#xFF0C;<code>start</code>&#x662F;&#x6392;&#x5217;&#x5728;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;&#x3002;<code>end</code>&#x6392;&#x5217;&#x5728;&#x5E95;&#x90E8;&#x3002;<code>center</code>&#x6392;&#x5217;&#x5728;&#x526F;&#x8F74;&#x4E2D;&#x95F4;&#x3002;<code>baseline</code>&#x6839;&#x636E;&#x57FA;&#x7EBF;&#x6392;&#x5217;&#xFF0C;<code>stretch</code>&#x8981;&#x6C42;&#x4ED6;&#x7684;&#x5B50;&#x7EC4;&#x4EF6;&#x526F;&#x8F74;&#x65B9;&#x5411;&#x5145;&#x6EE1;&#x7236;&#x7EC4;&#x4EF6;&#x3002;</li>
+</ul>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p>&#x5C55;&#x793A;&#x4E86;&#x4E3B;&#x8F74;&#x7684;&#x5E38;&#x7528;&#x7684;&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="../imgs/4.3-1.png" alt=""></p>
+<h3 id="expanded">Expanded</h3>
+<p>&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x6BD4;&#x4F8B;&#x6269;&#x5C55;<code>Row</code>&#x6216;&#x8005;<code>Column</code>&#x3001;<code>Flex</code>&#x7684;&#x6240;&#x5360;&#x7A7A;&#x95F4;&#x3002;</p>
+<pre><code class="lang-dart">Expanded({
+    Key key,
+    <span class="hljs-built_in">int</span> flex = <span class="hljs-number">1</span>,
+    <span class="hljs-meta">@required</span> Widget child,
+  })
+</code></pre>
 <p>&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code class="lang-dart"><span class="hljs-keyword">void</span> _showActionSheet() {
-showCupertinoModalPopup(
-    context: context,
-    builder: (ctx) {
-      <span class="hljs-keyword">return</span> CupertinoActionSheet(
-        title: Text(<span class="hljs-string">&apos;&#x6E29;&#x99A8;&#x63D0;&#x793A;&apos;</span>),
-        message: Text(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x652F;&#x4ED8;&#x9009;&#x9879;&#xFF0C;&#x4EFB;&#x610F;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x8FDB;&#x884C;&#x652F;&#x4ED8;&#x54E6;&apos;</span>),
-        actions: &lt;Widget&gt;[
-          CupertinoActionSheetAction(onPressed: _pop, child: Text(<span class="hljs-string">&apos;&#x5FAE;&#x4FE1;&apos;</span>)),
-          CupertinoActionSheetAction(onPressed: _pop, child: Text(<span class="hljs-string">&apos;&#x652F;&#x4ED8;&#x5B9D;&apos;</span>)),
-          CupertinoActionSheetAction(
-            onPressed: _pop,
-            child: Text(<span class="hljs-string">&apos;&#x53D6;&#x6D88;&apos;</span>),
-            isDestructiveAction: <span class="hljs-keyword">true</span>,
-          ),
-        ],
-      );
-    });
-}
+<pre><code class="lang-dart">Container(
+height: <span class="hljs-number">30</span>,
+child: Row(children: &lt;Widget&gt;[
+  Expanded(
+    flex: <span class="hljs-number">1</span>,
+    child: Container(
+      color: Colors.red,
+    ),
+  ),
+  Expanded(
+    flex: <span class="hljs-number">2</span>,
+    child: Container(
+      color: Colors.orange,
+    ),
+  ),
+  Expanded(
+    flex: <span class="hljs-number">3</span>,
+    child: Container(
+      color: Colors.blue,
+    ),
+  )
+]))
 </code></pre>
 <p>&#x6548;&#x679C;&#xFF1A;</p>
-<p><img src="../imgs/3.9.1-1.gif" alt=""></p>
-<h3 id="392-showcupertinodialog">3.9.2 showCupertinoDialog</h3>
-<p><code>showCupertinoDialog</code>&#x662F;&#x5BF9;<code>showGeneralDialog</code>&#x7684;&#x4E00;&#x4E2A;&#x5C01;&#x88C5;&#xFF0C;&#x53EA;&#x662F;<code>barrierDismissible</code>&#x3001;<code>barrierColor</code>&#x3001;<code>transitionDuration</code>&#x8FDB;&#x884C;&#x4E86;<code>iOS-style</code>&#x683C;&#x8C03;&#x7684;&#x8BBE;&#x7F6E;&#x3002;</p>
-<p>&#x6E90;&#x7801;&#xFF1A;</p>
-<pre><code class="lang-dart">
-Future&lt;T&gt; showCupertinoDialog&lt;T&gt;({
-  <span class="hljs-meta">@required</span> BuildContext context,
-  <span class="hljs-meta">@required</span> WidgetBuilder builder,
-  <span class="hljs-built_in">bool</span> useRootNavigator = <span class="hljs-keyword">true</span>,
-  RouteSettings routeSettings,
-}) {
-  <span class="hljs-keyword">assert</span>(builder != <span class="hljs-keyword">null</span>);
-  <span class="hljs-keyword">assert</span>(useRootNavigator != <span class="hljs-keyword">null</span>);
-  <span class="hljs-keyword">return</span> showGeneralDialog(
-    context: context,
-    barrierDismissible: <span class="hljs-keyword">false</span>,
-    barrierColor: CupertinoDynamicColor.resolve(_kModalBarrierColor, context),
-    <span class="hljs-comment">// This transition duration was eyeballed comparing with iOS</span>
-    transitionDuration: <span class="hljs-keyword">const</span> <span class="hljs-built_in">Duration</span>(milliseconds: <span class="hljs-number">250</span>),
-    pageBuilder: (BuildContext context, Animation&lt;<span class="hljs-built_in">double</span>&gt; animation, Animation&lt;<span class="hljs-built_in">double</span>&gt; secondaryAnimation) {
-      <span class="hljs-keyword">return</span> builder(context);
-    },
-    transitionBuilder: _buildCupertinoDialogTransitions,
-    useRootNavigator: useRootNavigator,
-    routeSettings: routeSettings,
-  );
-}
+<p><img src="../imgs/4.3-2.png" alt=""></p>
+<h3 id="spacer">Spacer</h3>
+<pre><code class="lang-dart"><span class="hljs-keyword">const</span> Spacer({Key key, <span class="hljs-keyword">this</span>.flex = <span class="hljs-number">1</span>})
 </code></pre>
-<p> &#x548C;<code>showCupertinoModalPopup</code>&#x533A;&#x522B;&#x662F;&#x4E00;&#x4E2A;&#x4ECE;&#x5E95;&#x90E8;&#xFF0C;&#x4E00;&#x4E2A;&#x5168;&#x5C4F;&#x3002;</p>
-<p> &#x4E0B;&#x9762;&#x770B;&#x4E0B;&#x4F8B;&#x5B50;&#xFF1B;</p>
-<pre><code class="lang-dart">showCupertinoDialog(
-    context: context,
-    builder: (ctx) {
-      <span class="hljs-keyword">return</span> CupertinoActionSheet(
-        title: Text(<span class="hljs-string">&apos;&#x6E29;&#x99A8;&#x63D0;&#x793A;&apos;</span>),
-        message: Text(<span class="hljs-string">&apos;&#x6211;&#x662F;showCupertinoDialog&apos;</span>),
-        actions: &lt;Widget&gt;[
-          CupertinoActionSheetAction(onPressed: _pop, child: Text(<span class="hljs-string">&apos;&#x5FAE;&#x4FE1;&apos;</span>)),
-          CupertinoActionSheetAction(onPressed: _pop, child: Text(<span class="hljs-string">&apos;&#x652F;&#x4ED8;&#x5B9D;&apos;</span>)),
-          CupertinoActionSheetAction(
-            onPressed: _pop,
-            child: Text(<span class="hljs-string">&apos;&#x53D6;&#x6D88;&apos;</span>),
-            isDestructiveAction: <span class="hljs-keyword">true</span>,
-          ),
-        ],
-      );
-    });
-</code></pre>
-<p> &#x6548;&#x679C;&#xFF1A;</p>
-<p> <img src="../imgs/3.9.2-1.gif" alt=""></p>
-<h3 id="393-showaboutdialog">3.9.3 showAboutDialog</h3>
-<p><code>showAboutDialog</code>&#x662F;<code>flutter</code>&#x5B98;&#x65B9;&#x5C01;&#x88C5;&#x7684;&#x4E00;&#x4E2A;&#x5173;&#x4E8E;&#x6211;&#x7684;&#x7EC4;&#x4EF6;&#xFF0C;&#x5305;&#x542B;&#x4E86;&#x7248;&#x672C;&#x53F7;&#x3001;icon&#x3001;&#x4EE5;&#x53CA;Licenses&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x6E90;&#x7801;&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x5C01;&#x88C5;&#x4E86;<code>Expanded</code>&#xFF0C;&#x4E3B;&#x52A8;&#x6DFB;&#x52A0;&#x4E86;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x662F;<code>0,0</code>&#x7684;<code>SizedBox.shrink()</code>.</p>
 <p>&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code class="lang-dart">showAboutDialog(
-  context: context,
-  applicationVersion: <span class="hljs-string">&apos;1.0.0&apos;</span>,
-  applicationIcon: Icon(Icons.scatter_plot),
-  applicationName: <span class="hljs-string">&apos;Jack ma&apos;</span>,
-);
-</code></pre>
-<p> <img src="../imgs/3.9.3-1.gif" alt=""></p>
-<h3 id="394-showgeneraldialog">3.9.4 showGeneralDialog</h3>
-<p><code>showGeneralDialog</code>&#x662F;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x57FA;&#x7840;&#x7684;&#x5F39;&#x7A97;&#xFF0C; &#x53EF;&#x4EE5;&#x7528;&#x8FD9;&#x4E2A;&#x5C01;&#x88C5;&#x6210;&#x4EFB;&#x610F;&#x5176;&#x4ED6;&#x7684;&#x5F39;&#x7A97;&#x3002;</p>
-<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code class="lang-dart">showGeneralDialog(
-    context: context,
-    barrierDismissible: <span class="hljs-keyword">true</span>,
-    barrierLabel: <span class="hljs-string">&apos;cancel&apos;</span>,
-    transitionDuration: <span class="hljs-built_in">Duration</span>(milliseconds: <span class="hljs-number">1000</span>),
-    pageBuilder: (BuildContext context, Animation&lt;<span class="hljs-built_in">double</span>&gt; animation,
-        Animation&lt;<span class="hljs-built_in">double</span>&gt; secondaryAnimation) {
-      <span class="hljs-keyword">return</span> Material(
-        child: Scaffold(
-          body: Center(
-            child: CupertinoActionSheet(
-              title: Text(<span class="hljs-string">&apos;&#x6E29;&#x99A8;&#x63D0;&#x793A;&apos;</span>),
-              message: Text(<span class="hljs-string">&apos;&#x6211;&#x662F;showGeneralDialog&#xFF0C;&#x4EFB;&#x610F;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x8FDB;&#x884C;&#x652F;&#x4ED8;&#x54E6;&apos;</span>),
-              actions: &lt;Widget&gt;[
-                CupertinoActionSheetAction(
-                    onPressed: _pop, child: Text(<span class="hljs-string">&apos;&#x5FAE;&#x4FE1;&apos;</span>)),
-                CupertinoActionSheetAction(
-                    onPressed: _pop, child: Text(<span class="hljs-string">&apos;&#x652F;&#x4ED8;&#x5B9D;&apos;</span>)),
-                CupertinoActionSheetAction(
-                  onPressed: _pop,
-                  child: Text(<span class="hljs-string">&apos;&#x53D6;&#x6D88;&apos;</span>),
-                  isDestructiveAction: <span class="hljs-keyword">true</span>,
-                ),
-              ],
-            ),
-          ),
-        ),
-      );
-    });
+<pre><code class="lang-dart">Container(
+    height: <span class="hljs-number">30</span>,
+    child: Row(children: &lt;Widget&gt;[
+      Container(
+        width: <span class="hljs-number">50</span>,
+        color: Colors.red,
+      ),
+      Spacer(
+        flex: <span class="hljs-number">1</span>,
+      ),
+      Container(
+        width: <span class="hljs-number">50</span>,
+        color: Colors.red,
+      ),
+      Spacer(
+        flex: <span class="hljs-number">2</span>,
+      ),
+      Container(
+        width: <span class="hljs-number">50</span>,
+        color: Colors.red,
+      ),
+    ]))
 </code></pre>
 <p>&#x6548;&#x679C;&#xFF1A;</p>
-<p><img src="../imgs/3.9.4-1.gif" alt=""></p>
-<h3 id="394-showdialog">3.9.4 showDialog</h3>
-<p><code>showDialog</code>&#x4E5F;&#x662F;&#x5C01;&#x88C5;&#x7684;<code>showGeneralDialog</code>,&#x53EA;&#x662F;&#x56FA;&#x5B9A;&#x53C2;&#x6570;&#x8FDB;&#x884C;&#x4E86;&#x9002;&#x914D;&#x3002;</p>
+<p><img src="../imgs/4.3-3.png" alt=""></p>
+<h3 id="&#x5B9E;&#x9645;&#x5E94;&#x7528;">&#x5B9E;&#x9645;&#x5E94;&#x7528;</h3>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x60F3;&#x5B50;&#x7EC4;&#x4EF6;&#x968F;&#x7740;&#x7528;&#x7236;&#x7EC4;&#x4EF6;&#x53D8;&#x5927;&#x800C;&#x53D8;&#x5927;&#xFF0C;&#x5C4F;&#x5E55;&#x53D8;&#x5BBD;&#x800C;&#x53D8;&#x5BBD;&#xFF0C;&#x90A3;&#x4E48;&#x8BF7;&#x4F7F;&#x7528;<code>&#x5F39;&#x6027;&#x5E03;&#x5C40;</code>.</p>
+<pre><code class="lang-dart">Row(
+  children: &lt;Widget&gt;[
+    Expanded(
+      child: OutlineButton(
+        child: Text(<span class="hljs-string">&apos;Expanded btn&apos;</span>),
+      ),
+    )
+  ],
+),
+OutlineButton(
+  child: Text(<span class="hljs-string">&apos;btn&apos;</span>),
+),
+</code></pre>
+<p>&#x6548;&#x679C;&#xFF1A;</p>
+<p><img src="../imgs/4.3-4.png" alt=""></p>
+<p>&#x5982;&#x679C;&#x8DDD;&#x79BB;&#x5DE6;&#x4FA7; &#x6216;&#x8005;&#x53F3;&#x4FA7;&#x8FB9;&#x8DDD;<code>20px</code>&#x5462;&#xFF1F;</p>
 <pre><code class="lang-dart">
-<span class="hljs-keyword">void</span> _showDialog() {
-showDialog(context: context, child: bd());
-}
-Widget bd() {
-<span class="hljs-keyword">return</span> CupertinoActionSheet(
-  title: Text(<span class="hljs-string">&apos;&#x6E29;&#x99A8;&#x63D0;&#x793A;&apos;</span>),
-  message: Text(<span class="hljs-string">&apos;&#x6211;&#x662F;&#x652F;&#x4ED8;&#x9009;&#x9879;&#xFF0C;&#x4EFB;&#x610F;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x8FDB;&#x884C;&#x652F;&#x4ED8;&#x54E6;&apos;</span>),
-  actions: &lt;Widget&gt;[
-    CupertinoActionSheetAction(onPressed: _pop, child: Text(<span class="hljs-string">&apos;&#x5FAE;&#x4FE1;&apos;</span>)),
-    CupertinoActionSheetAction(onPressed: _pop, child: Text(<span class="hljs-string">&apos;&#x652F;&#x4ED8;&#x5B9D;&apos;</span>)),
-    CupertinoActionSheetAction(
-      onPressed: _pop,
-      child: Text(<span class="hljs-string">&apos;&#x53D6;&#x6D88;&apos;</span>),
-      isDestructiveAction: <span class="hljs-keyword">true</span>,
+Row(
+  children: &lt;Widget&gt;[
+    SizedBox(
+      width: <span class="hljs-number">20</span>,
+    ),
+    Expanded(
+      child: OutlineButton(
+        child: Text(<span class="hljs-string">&apos;Expanded btn&apos;</span>),
+      ),
+    ),
+    SizedBox(
+      width: <span class="hljs-number">20</span>,
     ),
   ],
-);
-}
+)
 </code></pre>
-<p><img src="../imgs/3.9.5-1.gif" alt=""></p>
-<h3 id="396-showdatepicker">3.9.6 showDatePicker</h3>
-<p><code>showDatePicker</code>&#x662F;&#x5B98;&#x65B9;&#x63D0;&#x4F9B;&#x7684;&#x4E00;&#x4E2A;&#x65E5;&#x5386;&#x7EC4;&#x4EF6;&#xFF0C;&#x4E5F;&#x662F;&#x5EA7;&#x4F4D;&#x5F39;&#x7A97;&#x5F62;&#x5F0F;&#x5C55;&#x73B0;&#xFF0C;&#x53C2;&#x6570;&#x5F88;&#x7B80;&#x5355;&#x3002;</p>
-<pre><code class="lang-dart">showDatePicker({
-  <span class="hljs-meta">@required</span> BuildContext context,
-  <span class="hljs-meta">@required</span> <span class="hljs-built_in">DateTime</span> initialDate,
-  <span class="hljs-meta">@required</span> <span class="hljs-built_in">DateTime</span> firstDate,
-  <span class="hljs-meta">@required</span> <span class="hljs-built_in">DateTime</span> lastDate
-  ...
-  }
-</code></pre>
-<p>&#x53EA;&#x9700;&#x8981;&#x914D;&#x7F6E;&#x5F53;&#x524D;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x548C;&#x5F00;&#x59CB;&#x7ED3;&#x675F;&#x65F6;&#x95F4;&#x5373;&#x53EF;&#x3002;</p>
-<p>&#x4F8B;&#x5B50;&#xFF1A;</p>
-<pre><code class="lang-dart">
-showDatePicker(
-        context: <span class="hljs-keyword">this</span>.context,
-        initialDate: <span class="hljs-built_in">DateTime</span>.now(), <span class="hljs-comment">//&#x521D;&#x59CB;&#x65F6;&#x95F4;</span>
-        firstDate: <span class="hljs-built_in">DateTime</span>.now(), <span class="hljs-comment">//&#x5F00;&#x59CB;&#x65F6;&#x95F4;</span>
-        lastDate: <span class="hljs-built_in">DateTime</span>.now().add(<span class="hljs-built_in">Duration</span>(days: <span class="hljs-number">10</span>)), <span class="hljs-comment">//&#x6700;&#x540E;&#x65F6;&#x95F4;&#x662F;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x52A0;&#x4E0A;10&#x5929;</span>
-        initialDatePickerMode: DatePickerMode.year, <span class="hljs-comment">//&#x6700;&#x5F00;&#x59CB;&#x5C55;&#x793A;&#x5E74;&#x4EFD;</span>
-        initialEntryMode: DatePickerEntryMode.input, <span class="hljs-comment">//&#x5F00;&#x59CB;&#x662F;&#x8F93;&#x5165;&#x65F6;&#x95F4;&#x8FD8;&#x662F;&#x65E5;&#x5386;</span>
-        selectableDayPredicate: (time) {
-          <span class="hljs-built_in">print</span>(time.toString());
-          <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
-        })
-</code></pre>
-<p>&#x6548;&#x679C;&#xFF1A;</p>
-<p><img src="../imgs/3.9.6-1.gif" alt=""></p>
-<h3 id="397-showtimepicker">3.9.7 showTimePicker</h3>
-<p><code>showTimePicker</code>&#x662F;&#x4E00;&#x4E2A;&#x9009;&#x62E9;&#x65F6;&#x95F4;&#x957F;&#x77ED;&#x7684;&#x63A7;&#x4EF6;,&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x4F20;&#x5165;&#x9ED8;&#x8BA4;&#x65F6;&#x95F4;&#x5373;&#x53EF;&#x3002;</p>
-<pre><code class="lang-dart">showTimePicker(
-        context: <span class="hljs-keyword">this</span>.context, 
-        initialTime: TimeOfDay(hour: <span class="hljs-number">1</span>, minute: <span class="hljs-number">10</span>))
-</code></pre>
-<p>&#x6548;&#x679C;&#xFF1A;</p>
-<p><img src="../imgs/3.9.7-1.gif" alt=""></p>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="../imgs/4.3-5.png" alt=""></p>
+<h3 id="&#x603B;&#x7ED3;&#xFF1A;">&#x603B;&#x7ED3;&#xFF1A;</h3>
+<p> <strong>&#x5982;&#x679C;&#x6A2A;&#x7740;&#x6392;&#x5217;&#x8BF7;&#x7528;<code>Row</code>,&#x5982;&#x679C;&#x6A2A;&#x7740;&#x6709;&#x4E9B;&#x968F;&#x7740;&#x5C4F;&#x5E55;&#x53D8;&#x5BBD;&#x4E5F;&#x53D8;&#x5BBD;&#xFF0C;&#x4F7F;&#x7528;<code>Row</code>+<code>Expanded</code>,&#x5982;&#x679C;&#x56FA;&#x5B9A;&#x95F4;&#x9694;&#x8BF7;&#x4F7F;&#x7528;<code>SizedBox</code>,&#x5982;&#x679C;&#x95F4;&#x9694;&#x6309;&#x7167;&#x6BD4;&#x4F8B;&#x5206;&#x914D;&#xFF0C;&#x8BF7;&#x7528;<code>Spacer</code></strong></p>
+<p>&#x5F39;&#x6027;&#x5E03;&#x5C40;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#xFF0C;&#x591A;&#x7528;&#x624D;&#x80FD;&#x6709;&#x66F4;&#x6DF1;&#x7406;&#x89E3;&#x3002;</p>
 
                                 
                                 </section>
@@ -1757,14 +1701,6 @@ showDatePicker(
 
             
                 
-                <a href="3.8indicator.html" class="navigation navigation-prev " aria-label="Previous page: 3.8: 进度指示器">
-                    <i class="fa fa-angle-left"></i>
-                </a>
-                
-                
-                <a href="../test/di-si-zhang-bu-ju.md" class="navigation navigation-next " aria-label="Next page: 第四章 布局">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -1773,7 +1709,7 @@ showDatePicker(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.9: 弹窗","level":"2.3.9","depth":2,"next":{"title":"第四章 布局","level":"2.4","depth":1,"path":"test/di-si-zhang-bu-ju.md","ref":"test/di-si-zhang-bu-ju.md","articles":[{"title":"4.1 布局类组件简介","level":"2.4.1","depth":2,"ref":"","articles":[]},{"title":"4.2 线性布局（Row和Column","level":"2.4.2","depth":2,"ref":"","articles":[]},{"title":"4.3 弹性布局（Flex）","level":"2.4.3","depth":2,"path":"books/4.3flex.md","ref":"books/4.3flex.md","articles":[]},{"title":"4.4 流式布局","level":"2.4.4","depth":2,"ref":"","articles":[]},{"title":"4.5 层叠布局 Stack、Positioned","level":"2.4.5","depth":2,"path":"books/4.5stack.md","ref":"books/4.5stack.md","articles":[]},{"title":"4.6 对齐与相对定位（Align","level":"2.4.6","depth":2,"path":"books/4.6align.md","ref":"books/4.6align.md","articles":[]}]},"previous":{"title":"3.8: 进度指示器","level":"2.3.8","depth":2,"path":"books/3.8indicator.md","ref":"books/3.8indicator.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","expandable-chapters-small","expandable-chapters","code","-lunr","-search","search-pro","github","donate","livereload"],"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/ifgyong"},"livereload":{},"search-pro":{},"code":{"copyButtons":true},"donate":{"alipay":"/imgs/alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"如果觉得文章对你有所帮助，讨杯咖啡也是极好的。","wechat":"/imgs/wechatpay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"books/3.9dialog.md","mtime":"2020-06-29T08:02:26.607Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T09:55:16.016Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"4.3 弹性布局（Flex）","level":"2.4.3","depth":2,"next":{"title":"4.4 流式布局","level":"2.4.4","depth":2,"ref":"","articles":[]},"previous":{"title":"4.2 线性布局（Row和Column","level":"2.4.2","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","expandable-chapters-small","expandable-chapters","code","-lunr","-search","search-pro","github","donate","livereload"],"pluginsConfig":{"chapter-fold":{},"github":{"url":"https://github.com/ifgyong"},"livereload":{},"search-pro":{},"code":{"copyButtons":true},"donate":{"alipay":"/imgs/alipay.jpg","alipayText":"支付宝打赏","button":"赞赏","title":"如果觉得文章对你有所帮助，讨杯咖啡也是极好的。","wechat":"/imgs/wechatpay.jpg","wechatText":"微信打赏"},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"books/4.3flex.md","mtime":"2020-06-30T09:55:58.061Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-30T09:55:16.016Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
