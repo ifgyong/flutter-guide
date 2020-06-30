@@ -32,7 +32,7 @@
 	* [4.3 弹性布局（Flex）]()
 	* [4.4 流式布局]()
 	* [4.5 层叠布局 Stack、Positioned]()
-	* [4.6 对齐与相对定位（Align]()
+	* [4.6 对齐与相对定位（Align](books/4.6align.md)
 * [第五章 容器组件](*)
 	* [5.1 填充（Padding）]()
 	* [5.2 尺寸限制类容器（ConstrainedBox等）]()
