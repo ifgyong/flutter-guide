@@ -31,7 +31,7 @@
 	* [4.2 线性布局（Row和Column]()
 	* [4.3 弹性布局（Flex）]()
 	* [4.4 流式布局]()
-	* [4.5 层叠布局 Stack、Positioned]()
+	* [4.5 层叠布局 Stack、Positioned](books/4.5stack.md)
 	* [4.6 对齐与相对定位（Align](books/4.6align.md)
 * [第五章 容器组件](*)
 	* [5.1 填充（Padding）]()
