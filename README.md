@@ -83,7 +83,8 @@
   *  [9.4：自绘组件（CustomPaint与Canvas）]()
   *  [9.5：自绘实例：圆形渐变进度条(自绘)]()
 * [第十章 文件操作与网络请求](*)
-	* [10.1：文件操作](books/11.1 文件操作.md)
+
+	* [10.1：文件操作](books/11.1文件操作.md)
 	* [10.2：Http请求-HttpClient]()
 	* [10.3：Http请求-Dio package](books/11.3dio.md)
 	* [10.4：实例：Http分块下载]()
@@ -107,6 +108,7 @@
 * [第十四章 Flutter常用技巧](*)
  	* [14.1:Flutter 添加代码模板](books/15.1addlivetem.md)
  	* [14.2 Flutter保持当前页面状态不丢失](https://github.com/ifgyong/flutter-example/blob/master/lib/tips/keepStateAlive.dart)
- 	* [14.3 Isolates和event loops 初步了解](https://juejin.im/post/5f1fbdaee51d45348c1e06f0)	
+ 	* [14.3 Isolates和event loops 初步了解](https://juejin.im/post/5f1fbdaee51d45348c1e06f0)
+ 	* [14.4 Isolates 具体用法 ](https://github.com/ifgyong/flutter-example/blob/master/lib/tips/asyn_and_isolate.dart)	
 
 
